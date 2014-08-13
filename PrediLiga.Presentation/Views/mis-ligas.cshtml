@@ -1,0 +1,30 @@
+﻿@{
+    PageData["title"] = "AngularJS SPA | Mis Ligas";
+}
+
+<table class="table table-hover">
+
+    <tr>
+        <td> </td>
+        <td>Liga</td>
+        <td>Proximo partido</td>
+        <td>Proximos Encuentros</td>
+        <td>Aciertos</td>
+        <td>Puntos</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+    </tr>
+    <tr ng-repeat=" liga in misligas">
+        <td>{{liga.id}}</td>
+        <td> <a class=" btn-link" href="/liga/{{liga.id}}"> {{liga.nombre}} </a> </td>
+        <td>{{liga.proximo_Fecha}}</td>
+        <td>{{liga.proximo_Encuentro}}</td>
+        <td>{{liga.aciertos}}</td>
+        <td>{{liga.puntos}}</td>
+        <td class="success">PREDICT-A-GOAL</td>
+        <td>Ver Calendario</td>
+        <td class="danger">Omitir</td>
+    </tr>
+</table>
+<a href="/" class="btn btn-primary btn-block"> Salir </a>
